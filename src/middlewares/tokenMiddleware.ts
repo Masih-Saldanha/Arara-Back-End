@@ -6,7 +6,7 @@ import { throwError } from "../utils/errorTypeUtils.js";
 
 export interface TokenData {
     id: number,
-    email: string,
+    username: string,
     iat: number
 };
 
