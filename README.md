@@ -14,14 +14,14 @@ This is the back-end of the application Certi Amazônina Chat.
 
 ## Database deploy link
 
-https://back-end-template-example.com/
+<!-- https://back-end-template-example.com/ -->
 
 ## Usage
 
 ```bash
-$ git clone https://github.com/Masih-Saldanha/Certi-Amazonia-Back-End.git
+$ git clone https://github.com/Masih-Saldanha/Certi-Amazonia-Chat-Back-End.git
 
-$ cd Certi-Amazonia-Back-End
+$ cd Certi-Amazonia-Chat-Back-End
 
 $ npm install
 
