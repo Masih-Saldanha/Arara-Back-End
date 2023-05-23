@@ -11,38 +11,21 @@ datasource db {
   shadowDatabaseUrl = env("DATABASE_URL")
 }
 
-// model relation example:
+model Users {
+  id       Int        @id @default(autoincrement())
+  username String     @unique
+  password String
+  comments Comments[]
 
-// model Users {
-//   id       Int     @id @default(autoincrement())
-//   email    String  @unique
-//   password String
-//   cards    Cards[]
+  @@map("users")
+}
 
-//   @@map("users")
-// }
+model Comments {
+  id        Int      @id @default(autoincrement())
+  comment   String
+  createdAt DateTime @default(now())
+  userId    Int
+  users     Users    @relation(fields: [userId], references: [id])
 
-// model Cards {
-//   id             Int     @id @default(autoincrement())
-//   title          String
-//   number         String
-//   name           String
-//   securityCode   String
-//   expirationDate String
-//   password       String
-//   isVirtual      Boolean
-//   type           Card
-//   userId         Int
-//   users          Users   @relation(fields: [userId], references: [id])
-
-//   @@unique([userId, title])
-//   @@map("cards")
-// }
-
-// enum example:
-
-// enum Card {
-//   credit
-//   debit
-//   both
-// }
+  @@map("comments")
+}
