@@ -11,12 +11,20 @@ async function findUserByUsername(username: string) {
     });
 };
 
+async function findUserById(id: number) {
+    return prisma.users.findUnique({
+        where: { id },
+        select: { id: true, username: true, password: true },
+    });
+};
+
 async function registerUser(username: string, password: string) {
     await prisma.users.create({ data: { username, password } });
 };
 
 const authRepository = {
     findUserByUsername,
+    findUserById,
     registerUser,
 };
 
