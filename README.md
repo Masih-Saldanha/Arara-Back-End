@@ -1,16 +1,16 @@
 <p align="center">
   <a href="https://github.com/$username-github/$nome-repositorio">
-    <img src="https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f512.svg" alt="readme-logo" width="80" height="80"> <!-- src="image-link" -->
+    <img src="https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f4ac.svg" alt="readme-logo" width="80" height="80"> <!-- src="image-link" -->
   </a>
 
   <h3 align="center">
-    Back-end Template
+    Certi Amazônina Chat Back-end
   </h3>
 </p>
 
 ## Description
 
-This is an back-end repository template.
+This is the back-end of the application Certi Amazônina Chat.
 
 ## Database deploy link
 
@@ -19,9 +19,9 @@ https://back-end-template-example.com/
 ## Usage
 
 ```bash
-$ git clone https://github.com/Masih-Saldanha/back-end-template
+$ git clone https://github.com/Masih-Saldanha/Certi-Amazonia-Back-End.git
 
-$ cd back-end-template
+$ cd Certi-Amazonia-Back-End
 
 $ npm install
 
@@ -30,186 +30,65 @@ $ npm run dev
 
 ## API:
 
-Under Construction...
-<!-- 
-### Rotas de autenticação:
+### Auth Routes:
 
 ```
-- POST /signup
-    - Rota para cadastrar um usuário (Senha de no mínimo 10 caracteres)
+- POST /auth/signup
+    - Route to register a user (username of at least 3 characters and password of at least 8 characters with at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character)
     - headers: {}
     - body: {
-        "email": "email@email.com",
-        "password": "somepassword"
+        "username": "Some username",
+        "password": "1Password!"
     }
 ```
 ```
-- POST /signin
-    - Rota para o usuário logar e receber um token através do corpo da resposta
+- POST /auth/signin
+    - Route for the user to log in and receive a token through the response body
     - headers: {}
     - body: {
-        "email": "email@email.com",
-        "password": "somepassword"
+        "username": "Some username",
+        "password": "1Password!"
     }
 ```
     
-### Rotas de credenciais:
+### Comment Routes:
 
 ```
-- POST /credential/register
-    - Rota para o usuário registrar uma credencial
+- POST /comment/register
+    - Route for user to register a comment in chat
     - headers: {
         "Authorization": "Bearer token"
     }
     - body: {
-        "title": "Some title",
-        "url": "http://www.someurl.com",
-        "user": "Some User Name",
-        "password": "somepassword"
+        "comment": "Testing comments",
+        "userId": 1
     }
 ```
 ```
-- GET /credential/getall
-    - Rota para o usuário resgatar todas as suas credenciais criadas através do corpo da resposta
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {}
-```
-```
-- GET /credential/get/:credentialId
-    - Rota para o usuário resgatar uma credencial específica informada pelo params "credentialId" através do corpo da resposta
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {}
-```
-```
-- DELETE /credential/delete/:credentialId
-    - Rota para o usuário deletar uma credencial específica informada pelo params "credentialId"
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {}
-```
-    
-### Rotas de notas seguras:
-
-```
-- POST /securenote/register
-    - Rota para o usuário registrar uma nota segura ("title" máx 50 char. e "note" máx 1000 char.)
+- PUT /comment/edit
+    - Route for user to edit an own comment in chat
     - headers: {
         "Authorization": "Bearer token"
     }
     - body: {
-        "title": "Some Title",
-        "note": "Some Note"
+        "comment": "Testing comments",
+        "userId": 1,
+        "commentId": 1
     }
 ```
 ```
-- GET /securenote/getall
-    - Rota para o usuário resgatar todas as suas notas seguras criadas através do corpo da resposta
+- DELETE /comment/delete/:commentId
+    - Route for user to delete an own comment in chat
     - headers: {
         "Authorization": "Bearer token"
     }
     - body: {}
 ```
 ```
-- GET /securenote/get/:securenoteId
-    - Rota para o usuário resgatar uma nota segura específica informada pelo params "securenoteId" através do corpo da resposta
+- GET /comment/get/:page
+    - Route for user to retrieve chat comments by pagination. Eg: if comments size is 30 (0 - 29), 'page = 0' returns comments from 20 to 29, 'page = 1' returns comments from 10 to 19 and so on
     - headers: {
         "Authorization": "Bearer token"
     }
     - body: {}
 ```
-```
-- DELETE /securenote/delete/:securenoteId
-    - Rota para o usuário deletar uma nota segura específica informada pelo params "securenoteId"
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {}
-```
-    
-### Rotas de cartões:
-
-```
-- POST /card/register
-    - Rota para o usuário registrar um cartão ("type": credit, debit ou both)
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {
-        "title": "Some Title",
-        "number": "1234 1234 1234 1234",
-        "name": "Some Name",
-        "securityCode": "123",
-        "expirationDate": "10/27",
-        "password": "1234",
-        "isVirtual": false,
-        "type": "both"
-    }
-```
-```
-- GET /card/getall
-    - Rota para o usuário resgatar todas os seus cartões criados através do corpo da resposta
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {}
-```
-```
-- GET /card/get/:cardId
-    - Rota para o usuário resgatar um cartão específico informado pelo params "cardId" através do corpo da resposta
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {}
-```
-```
-- DELETE /card/delete/:cardId
-    - Rota para o usuário deletar um cartão específico informado pelo params "cardId"
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {}
-```
-    
-### Rotas de wi-fi:
-
-```
-- POST /wifi/register
-    - Rota para o usuário registrar uma wi-fi
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {
-        "title": "Some Title",
-        "name": "Some Name",
-        "password": "somepassword"
-    }
-```
-```
-- GET /wifi/getall
-    - Rota para o usuário resgatar todas as suas wi-fis criadas através do corpo da resposta
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {}
-```
-```
-- GET /wifi/get/:wifiId
-    - Rota para o usuário resgatar uma wi-fi específica informada pelo params "wifiId" através do corpo da resposta
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {}
-```
-```
-- DELETE /wifi/delete/:wifiId
-    - Rota para o usuário deletar uma wi-fi específica informada pelo params "wifiId"
-    - headers: {
-        "Authorization": "Bearer token"
-    }
-    - body: {}
-``` -->

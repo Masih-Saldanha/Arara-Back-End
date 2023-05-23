@@ -39,7 +39,8 @@ async function getComments(page: number, pageSize: number) {
     return prisma.comments.findMany({
         skip,
         take,
-        include: { users: { select: { username: true } } }
+        orderBy: { id: "desc" },
+        include: { users: { select: { username: true } } },
     });
 };
 
