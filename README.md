@@ -10,7 +10,7 @@
 
 ## Description
 
-This is the back-end of the application Certi Amazônina Chat.
+This is the back-end of the application Certi Amazônia Chat.
 
 ## Database deploy link
 
