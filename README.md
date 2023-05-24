@@ -4,7 +4,7 @@
   </a>
 
   <h3 align="center">
-    Certi Amazônina Chat Back-end
+    Certi Amazônia Chat Back-end
   </h3>
 </p>
 
