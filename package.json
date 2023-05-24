@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "ls /src && node index.js",
+    "start": "ls src && node src/index.js",
     "dev": "nodemon src/index.ts"
   },
   "keywords": [],
