@@ -5,8 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "ls /opt/render && tsc",
-    "start": "ls /opt/render/project/src && node src/index.js",
+    "build": "tsc",
+    "start": "ls /opt/render/project/src/src && node src/index.js",
     "dev": "nodemon src/index.ts"
   },
   "keywords": [],
