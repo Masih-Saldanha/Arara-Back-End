@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "ls /opt/render/project/src/dist && node /opt/render/project/src/dist/src/index.js",
+    "start": "tsc && ls /opt/render/project/src && node /opt/render/project/src/dist/src/index.js",
     "dev": "nodemon src/index.ts"
   },
   "keywords": [],
