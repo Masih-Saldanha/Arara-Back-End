@@ -14,7 +14,7 @@ This is the back-end of the application Certi Amazônina Chat.
 
 ## Database deploy link
 
-<!-- https://back-end-template-example.com/ -->
+https://certi-amazonia-chat.onrender.com/
 
 ## Usage
 
