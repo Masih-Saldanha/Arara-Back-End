@@ -1,8 +1,8 @@
 {
-  "name": "certi-amazonia-back-end",
+  "name": "arara-back-end",
   "type": "module",
   "version": "1.0.0",
-  "description": "Back-end layer of the Certi Amazonia Chat App",
+  "description": "Back-end layer of the Arara Chat App",
   "main": "index.js",
   "scripts": {
     "prisma:migrate": "prisma migrate dev",

@@ -4,13 +4,13 @@
   </a>
 
   <h3 align="center">
-    Certi Amazônia Chat Back-end
+    Arara Back-end
   </h3>
 </p>
 
 ## Description
 
-This is the back-end of the application Certi Amazônia Chat.
+This is the back-end of the application Arara.
 
 ## Database deploy link
 
