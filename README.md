@@ -19,9 +19,9 @@ https://certi-amazonia-chat.onrender.com/
 ## Usage
 
 ```bash
-$ git clone https://github.com/Masih-Saldanha/Certi-Amazonia-Chat-Back-End.git
+$ git clone https://github.com/Masih-Saldanha/Arara-Back-End.git
 
-$ cd Certi-Amazonia-Chat-Back-End
+$ cd Arara-Back-End
 
 $ npm install
 
