@@ -8,7 +8,7 @@
     "prisma:migrate": "prisma migrate dev",
     "prisma:deploy": "prisma migrate deploy",
     "prisma:seed": "prisma db seed",
-    "build": "npm install && tsc && npx prisma migrate deploy && npx prisma db seed",
+    "build": "npm install && tsc && npx prisma db seed",
     "start": "node /opt/render/project/src/dist/src/index.js",
     "dev": "nodemon src/index.ts"
   },
