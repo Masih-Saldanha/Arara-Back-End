@@ -4,13 +4,13 @@
   </a>
 
   <h3 align="center">
-    Arara Back-end
+    Certi Amazônia Chat Back-end
   </h3>
 </p>
 
 ## Description
 
-This is the back-end of the application Arara.
+This is the back-end of the application Certi Amazonia Chat.
 
 ## Database deploy link
 
@@ -19,9 +19,9 @@ https://certi-amazonia-chat.onrender.com/
 ## Usage
 
 ```bash
-$ git clone https://github.com/Masih-Saldanha/Arara-Back-End.git
+$ git clone https://github.com/Masih-Saldanha/Certi-Amazonia-Chat-Back-End.git
 
-$ cd Arara-Back-End
+$ cd Certi-Amazonia-Chat-Back-End
 
 $ npm install
 
